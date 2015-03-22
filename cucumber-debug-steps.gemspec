@@ -8,6 +8,8 @@ Gem::Specification.new do |s|
   s.homepage = "http://github.com/thickpaddy/cucumber-debug-steps"
   s.license  = "MIT"
 
+  s.required_ruby_version = '>= 1.9.2'
+
   s.add_dependency('cucumber')
   s.add_dependency('capybara')
   s.add_dependency('coderay')
