@@ -11,5 +11,5 @@ Gem::Specification.new do |s|
   s.add_dependency('cucumber')
   s.add_dependency('capybara')
   s.add_dependency('coderay')
-  s.add_dependency('htmlbeautifier')
+  s.add_dependency('htmlbeautifier', '>=1.0.0')
 end

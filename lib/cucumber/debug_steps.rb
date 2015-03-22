@@ -3,22 +3,12 @@ require 'htmlbeautifier'
 
 module DebugStepsHelper
   def peek
-    print CodeRay.scan(beautify_html(page.source), :html).term
-  end
-
-  def beautify_html(input)
-    if HtmlBeautifier.respond_to?(:beautify)
-      output = HtmlBeautifier.beautify(input)
-    else
-      output = String.new
-      HtmlBeautifier::Beautifier.new(output).scan(input)
-    end
-    output << "\n"
+    print CodeRay.scan(HtmlBeautifier.beautify(page.source), :html).term, "\n"
   end
 end
 World(DebugStepsHelper)
 
-Then 'peek' do
+Then "peek" do
   peek
 end
 
